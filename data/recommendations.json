@@ -1,13 +1,12 @@
 {
   "keywords": [
+    { "id": "bluffing", "label": { "en": "Bluffing", "ko": "블러핑" } },
     { "id": "coop", "label": { "en": "Co-operative", "ko": "협력" } },
-    { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } },
-    { "id": "party", "label": { "en": "Party", "ko": "파티" } },
-    { "id": "gateway", "label": { "en": "Easy to learn", "ko": "입문용" } },
-    { "id": "brainy", "label": { "en": "Big think", "ko": "두뇌풀가동" } },
     { "id": "cute", "label": { "en": "Cute", "ko": "귀여움" } },
+    { "id": "gateway", "label": { "en": "Easy to learn", "ko": "입문용" } },
+    { "id": "party", "label": { "en": "Party", "ko": "파티" } },
     { "id": "quick", "label": { "en": "Quick", "ko": "짧고 간단" } },
-    { "id": "negotiation", "label": { "en": "Negotiation", "ko": "협상" } }
+    { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } }
   ],
   "entries": [
     {
@@ -63,7 +62,7 @@
     {
       "gameId": 306735,
       "players": [2, 3, 4, 5, 6],
-      "keywords": ["party", "quick"],
+      "keywords": ["party", "quick", "bluffing"],
       "note": {
         "en": "A fast bluffing game of chili, wasabi, and pepper.",
         "ko": "고추·와사비·후추로 뻥카를 치는 빠른 게임."
@@ -73,7 +72,7 @@
     {
       "gameId": 188834,
       "players": [5, 6, 7, 8, 9],
-      "keywords": ["social", "party", "negotiation"],
+      "keywords": ["social", "party", "bluffing"],
       "note": {
         "en": "Liberals versus hidden fascists. Trust no one.",
         "ko": "자유주의자와 숨은 파시스트의 대결. 아무도 믿지 마세요."
@@ -83,7 +82,7 @@
     {
       "gameId": 92415,
       "players": [3, 4, 5, 6],
-      "keywords": ["party", "quick"],
+      "keywords": ["party", "quick", "bluffing"],
       "note": {
         "en": "Flowers or skull? A pure game of nerve and bluff.",
         "ko": "꽃이냐 해골이냐, 배짱과 허세의 게임."
@@ -93,7 +92,7 @@
     {
       "gameId": 198773,
       "players": [4, 5, 6, 7, 8],
-      "keywords": ["party"],
+      "keywords": ["party", "coop"],
       "note": {
         "en": "One-word clues to connect the picture cards.",
         "ko": "한 단어 힌트로 그림 카드를 이어보세요."
