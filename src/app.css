@@ -37,7 +37,7 @@
   --font-body: 'Pretendard', 'Pretendard Variable', -apple-system,
     BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR',
     system-ui, sans-serif;
-  --font-display: 'Cafe Display', 'Pretendard', var(--font-body);
+  --font-display: 'Gaegu', 'Pretendard', var(--font-body);
 
   /* --- Shape / rhythm ---------------------------------------------------- */
   --radius: 12px;
@@ -49,8 +49,10 @@
 }
 
 /* --------------------------------------------------------------------------
-   Self-hosted fonts. Drop the woff2 files into static/fonts/ (see README).
-   Until then the fallback stacks above keep Korean + Latin looking right.
+   Body face: self-hosted Pretendard. Drop PretendardVariable.woff2 into
+   static/fonts/ (see README); until then the fallback stack above keeps
+   Korean + Latin looking right. The display face (Gaegu) is self-hosted via
+   the @fontsource/gaegu import in src/routes/+layout.svelte.
    -------------------------------------------------------------------------- */
 @font-face {
   font-family: 'Pretendard';
@@ -58,14 +60,6 @@
   font-weight: 400 700;
   font-display: swap;
   src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
-}
-@font-face {
-  font-family: 'Cafe Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  /* Optional characterful Latin face for the wordmark; falls back gracefully. */
-  src: url('/fonts/CafeDisplay.woff2') format('woff2');
 }
 
 /* --------------------------------------------------------------------------

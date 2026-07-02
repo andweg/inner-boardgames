@@ -43,10 +43,6 @@ export const dict = {
   'filter.lang.any': { ko: '상관없음', en: 'Any' },
   'filter.lang.ko': { ko: '한국어로', en: 'Korean' },
   'filter.lang.en': { ko: '영어로', en: 'English' },
-  'filter.lang.help': {
-    ko: '한국어판이 있거나, 언어 의존도가 낮아(2 이하) 번역 없이도 즐길 수 있는 게임입니다.',
-    en: 'Has a Korean edition, or is light enough on text (language dependence ≤ 2) to play without it.'
-  },
   'filter.expansions': { ko: '확장판 숨기기', en: 'Hide expansions' },
 
   // Table columns

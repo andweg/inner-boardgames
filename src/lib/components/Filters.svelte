@@ -127,15 +127,7 @@
 
     <!-- Language playability (flagship) -->
     <div class="field">
-      <span class="lbl">
-        {$t('filter.lang')}
-        <button
-          type="button"
-          class="help"
-          aria-label={$t('filter.lang.help')}
-          title={$t('filter.lang.help')}>?</button
-        >
-      </span>
+      <span class="lbl">{$t('filter.lang')}</span>
       <div class="segmented" role="group" aria-label={$t('filter.lang')}>
         {#each langOptions as opt}
           <button
@@ -149,7 +141,6 @@
           </button>
         {/each}
       </div>
-      <p class="help-text">{$t('filter.lang.help')}</p>
     </div>
 
     <!-- Expansions -->
@@ -315,24 +306,6 @@
     width: 1.1rem;
     height: 1.1rem;
     accent-color: var(--red);
-  }
-
-  .help {
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    border: 1.5px solid var(--line);
-    background: var(--yellow);
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--ink);
-  }
-  .help-text {
-    margin: 0;
-    font-size: 0.8rem;
-    color: var(--ink-soft);
-    max-width: 42ch;
   }
 
   /* -------- Mobile: collapse into a toggleable panel -------- */
