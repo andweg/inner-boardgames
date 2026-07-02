@@ -44,9 +44,10 @@
   }
   .bar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    /* row-gap keeps the two rows tight when the nav wraps below the brand */
+    gap: 0.35rem 1rem;
     min-height: 60px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -57,23 +58,45 @@
     gap: 0.6rem;
     text-decoration: none;
     color: var(--teal);
+    /* Never shrink or wrap the wordmark: if space is tight the nav wraps to
+       its own row instead of the name breaking across lines. */
+    flex: 0 0 auto;
   }
   .brand img {
     border-radius: 50%;
     background: var(--surface);
     border: var(--border);
     box-shadow: var(--shadow-hard);
+    transform-origin: 50% 50%;
+  }
+  /* One clockwise spin when you hover the logo/name (disabled under
+     prefers-reduced-motion via the global rule in app.css). */
+  .brand:hover img {
+    animation: logo-spin 0.6s ease;
+  }
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
   .name {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: -0.01em;
+    white-space: nowrap;
   }
   .nav {
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    /* pushes the nav to the right edge on one row, and keeps it right-aligned
+       on its own row once it wraps */
+    margin-left: auto;
+    flex: 0 0 auto;
   }
   .link {
     padding: 0.35rem 0.7rem;
