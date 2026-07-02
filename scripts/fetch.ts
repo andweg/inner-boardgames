@@ -17,7 +17,7 @@ import type {
   GamesFile,
   RecommendationsFile
 } from '../src/lib/types.ts';
-import { bggGet, sleep } from './lib/bgg.ts';
+import { assertBggAuth, bggGet, sleep } from './lib/bgg.ts';
 import { parseGeeklist } from './lib/parse-geeklist.ts';
 import { parseThing } from './lib/parse-thing.ts';
 import {
@@ -118,6 +118,14 @@ async function validateRecommendations(
 }
 
 async function main(): Promise<void> {
+  // Load a local .env (token, etc.) for local runs. In CI the env comes from
+  // the workflow, so a missing .env is fine.
+  if (existsSync('.env')) process.loadEnvFile('.env');
+
+  // BGG's XML API requires an authorization token — bail out early with
+  // guidance rather than making a run of doomed 401 requests.
+  assertBggAuth();
+
   const report = new Report();
   const generatedAt = new Date().toISOString();
 

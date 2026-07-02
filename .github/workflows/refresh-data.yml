@@ -32,8 +32,12 @@ jobs:
         run: npm ci
 
       # If fetch exits non-zero the workflow fails here and nothing is committed.
+      # BGG's XML API requires a Bearer token; it comes from a repository secret
+      # (Settings → Secrets and variables → Actions → new secret BGG_API_TOKEN).
       - name: Fetch data from BGG
         run: npm run fetch
+        env:
+          BGG_API_TOKEN: ${{ secrets.BGG_API_TOKEN }}
 
       - name: Commit refreshed data if changed
         run: |

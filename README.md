@@ -133,6 +133,24 @@ automatically using the `gameId`.
 
 ## 4. Refreshing the game list
 
+### One-time: give it a BGG access token
+
+BoardGameGeek now requires an access token to read its data — anonymous requests
+are rejected. You set this up once:
+
+1. Go to **https://boardgamegeek.com/using_the_xml_api**, register/request access,
+   and create a token for your app.
+2. On GitHub, open your project → **Settings** → **Secrets and variables** →
+   **Actions** → **New repository secret**.
+3. Name it exactly **`BGG_API_TOKEN`** and paste your token as the value. Save.
+
+That's it — the twice-daily refresh reads the token from that secret. Keep the
+token private; never paste it into a file in the project. If a refresh ever fails
+with a "rejected the request (HTTP 401)" message, the token is missing, wrong, or
+not yet approved — recheck the secret.
+
+### The automatic refresh
+
 The site updates itself **automatically at midnight and noon (KST)** — you don't
 have to do anything.
 
@@ -183,10 +201,14 @@ npm run build      # produce the static site in build/
 npm run check      # type-check
 ```
 
+To run `npm run fetch` locally you need a BGG token (see §4). Copy `.env.example`
+to `.env` and set `BGG_API_TOKEN=<your token>`; the script loads `.env`
+automatically. `.env` is git-ignored.
+
 - **Stack:** SvelteKit (Svelte 5 runes) + `adapter-static`, TypeScript, hand-written CSS.
 - **Data pipeline:** `scripts/fetch.ts` (Node 22, run via `tsx`) — polite BGG
-  client with 202-retry, tag parsing/validation, `sharp` cover thumbnails,
-  deterministic `data/games.json`.
+  client with Bearer-token auth (`BGG_API_TOKEN`), 202-retry, tag
+  parsing/validation, `sharp` cover thumbnails, deterministic `data/games.json`.
 - **No backend, no database, no runtime BGG calls.** The committed JSON is
   bundled at build time.
 - The shared data shape lives in `src/lib/types.ts`.
