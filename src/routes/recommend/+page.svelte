@@ -80,7 +80,7 @@
   <div class="empty">
     <p class="e-title">{$t('rec.empty.title')}</p>
     <p class="e-hint">{$t('rec.empty.hint')}</p>
-    <a class="e-link" href="/">{$t('rec.empty.link')}</a>
+    <a class="e-link" href="/library">{$t('rec.empty.link')}</a>
   </div>
 {:else}
   <div class="grid">

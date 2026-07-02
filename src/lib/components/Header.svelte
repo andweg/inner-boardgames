@@ -4,10 +4,7 @@
   import { siteConfig } from '../../../config/site.config.ts';
   import LangToggle from './LangToggle.svelte';
 
-  const isActive = (path: string) =>
-    path === '/'
-      ? $page.url.pathname === '/'
-      : $page.url.pathname.startsWith(path);
+  const isActive = (path: string) => $page.url.pathname.startsWith(path);
 </script>
 
 <header class="site-header">
@@ -18,7 +15,12 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <a href="/" class="link" class:active={isActive('/')} aria-current={isActive('/') ? 'page' : undefined}>
+      <a
+        href="/library"
+        class="link"
+        class:active={isActive('/library')}
+        aria-current={isActive('/library') ? 'page' : undefined}
+      >
         {$t('nav.library')}
       </a>
       <a
