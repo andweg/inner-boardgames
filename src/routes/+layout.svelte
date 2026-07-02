@@ -4,6 +4,8 @@
   // runtime font-CDN call. Used only for headings/wordmark via --font-display.
   import '@fontsource/gaegu/400.css';
   import '@fontsource/gaegu/700.css';
+  // Body face: self-hosted Gowun Dodum (soft humanist sans, Latin + Korean).
+  import '@fontsource/gowun-dodum/400.css';
   import Header from '$lib/components/Header.svelte';
   import { generatedAt } from '$lib/data.ts';
   import { locale } from '$lib/i18n/store.ts';

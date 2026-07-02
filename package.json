@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@fontsource/gaegu": "^5.2.8",
+    "@fontsource/gowun-dodum": "^5.2.8",
     "fast-xml-parser": "^4.5.0",
     "sharp": "^0.33.5"
   },

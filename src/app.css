@@ -34,7 +34,7 @@
   --shadow-soft: 0 2px 8px rgba(22, 33, 31, 0.1);
 
   /* --- Type -------------------------------------------------------------- */
-  --font-body: 'Pretendard', 'Pretendard Variable', -apple-system,
+  --font-body: 'Gowun Dodum', 'Pretendard', 'Pretendard Variable', -apple-system,
     BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR',
     system-ui, sans-serif;
   --font-display: 'Gaegu', 'Pretendard', var(--font-body);
@@ -49,10 +49,10 @@
 }
 
 /* --------------------------------------------------------------------------
-   Body face: self-hosted Pretendard. Drop PretendardVariable.woff2 into
-   static/fonts/ (see README); until then the fallback stack above keeps
-   Korean + Latin looking right. The display face (Gaegu) is self-hosted via
-   the @fontsource/gaegu import in src/routes/+layout.svelte.
+   Fonts. Body (Gowun Dodum) and display (Gaegu) are self-hosted via the
+   @fontsource imports in src/routes/+layout.svelte. Pretendard stays in the
+   stack as a fallback; drop PretendardVariable.woff2 into static/fonts/ to
+   self-host it too (see README), otherwise the system Korean UI font covers it.
    -------------------------------------------------------------------------- */
 @font-face {
   font-family: 'Pretendard';
