@@ -1,0 +1,41 @@
+{
+  "keywords": [
+    { "id": "coop", "label": { "en": "Co-operative", "ko": "협력" } },
+    { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } },
+    { "id": "party", "label": { "en": "Party", "ko": "파티" } },
+    { "id": "gateway", "label": { "en": "Easy to learn", "ko": "입문용" } },
+    { "id": "brainy", "label": { "en": "Big think", "ko": "두뇌풀가동" } }
+  ],
+  "entries": [
+    {
+      "gameId": 174430,
+      "players": [1, 2, 3, 4],
+      "keywords": ["coop"],
+      "note": {
+        "en": "The co-op campaign everyone asks about. Clear an afternoon.",
+        "ko": "모두가 물어보는 협력 캠페인. 오후 시간을 통째로 비우세요."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 178900,
+      "players": [4, 5, 6, 7, 8],
+      "keywords": ["party", "social"],
+      "note": {
+        "en": "Two teams, one grid of words. Loud in the best way.",
+        "ko": "두 팀, 단어 한 판. 시끌벅적하게 즐기기 좋아요."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 148228,
+      "players": [2, 3, 4],
+      "keywords": ["gateway"],
+      "note": {
+        "en": "Collect gems, look rich. Teaches itself in a minute.",
+        "ko": "보석 모으고 부자 되기. 1분이면 설명 끝."
+      },
+      "priority": 2
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Design tokens — every colour on the site derives from the café logo.
+   Logo palette: sky-blue field + cup, deep-teal "book" disc, red "music"
+   disc, mint "coffee" disc, warm-yellow "smiley" disc, chunky black ink.
+   Direction: warm, cozy café — the site is the menu, not an admin panel.
+   ========================================================================== */
+
+:root {
+  /* --- Raw hues pulled from the logo ------------------------------------- */
+  --sky: #6eafee; /* the big blue field + the cup */
+  --sky-deep: #3d7fd0;
+  --teal: #0e3d39; /* the book disc — our ink/anchor */
+  --red: #e5232b; /* the music disc — the one loud accent */
+  --red-deep: #c01118;
+  --mint: #b7efd9; /* the coffee disc */
+  --yellow: #f6e7a6; /* the smiley disc */
+
+  /* --- Semantic surfaces (warm neutrals derived from yellow/mint) -------- */
+  --paper: #fbf6ea; /* page — warm off-white, like lamp-lit wood */
+  --surface: #fffdf7; /* cards, table rows */
+  --surface-alt: #f3ecd8; /* zebra striping, wells */
+  --ink: #16211f; /* body text — near-black with a teal cast */
+  --ink-soft: #4a5a55; /* secondary text */
+  --line: #16211f; /* the logo's signature chunky outline */
+  --line-soft: #d8cfb6; /* quiet hairlines between rows */
+
+  /* --- Roles ------------------------------------------------------------- */
+  --brand: var(--teal);
+  --accent: var(--red);
+  --link: var(--sky-deep);
+  --focus: var(--sky-deep);
+  --chip-on: var(--yellow);
+  --shadow-hard: 3px 3px 0 var(--line); /* the "table token" drop shadow */
+  --shadow-soft: 0 2px 8px rgba(22, 33, 31, 0.1);
+
+  /* --- Type -------------------------------------------------------------- */
+  --font-body: 'Pretendard', 'Pretendard Variable', -apple-system,
+    BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR',
+    system-ui, sans-serif;
+  --font-display: 'Cafe Display', 'Pretendard', var(--font-body);
+
+  /* --- Shape / rhythm ---------------------------------------------------- */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+  --border: 2px solid var(--line);
+  --gap: 1rem;
+  --maxw: 1120px;
+}
+
+/* --------------------------------------------------------------------------
+   Self-hosted fonts. Drop the woff2 files into static/fonts/ (see README).
+   Until then the fallback stacks above keep Korean + Latin looking right.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Cafe Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  /* Optional characterful Latin face for the wordmark; falls back gracefully. */
+  src: url('/fonts/CafeDisplay.woff2') format('woff2');
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4em;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Tabular numerals everywhere data lines up. */
+.tnum,
+td,
+th {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Visible, on-brand keyboard focus. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Respect users who don't want motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

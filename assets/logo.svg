@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Board game café logo">
+  <!--
+    Café logo — the source of the site's colour palette:
+      #6EAFEE sky   #0E3D39 teal   #E5232B red   #B7EFD9 mint   #F6E7A6 yellow
+    Owners: replace this file with your real logo (SVG or PNG). Keep the same
+    filename, or update the reference in src/lib/components/Header.svelte and the
+    copy in static/logo.svg (which is the one actually served).
+  -->
+  <circle cx="100" cy="100" r="95" fill="#6EAFEE" stroke="#111" stroke-width="6"/>
+  <circle cx="100" cy="60" r="42" fill="#0E3D39" stroke="#111" stroke-width="5"/>
+  <g stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 74 L82 66 Q80 52 82 44 L100 52 Z" fill="#fff"/>
+    <path d="M100 74 L118 66 Q120 52 118 44 L100 52 Z" fill="#fff"/>
+    <path d="M100 52 L100 74" fill="none"/>
+  </g>
+  <circle cx="60" cy="102" r="42" fill="#E5232B" stroke="#111" stroke-width="5"/>
+  <path d="M58 88 L74 84 L74 90 L64 92.5 L64 112 Q64 118 57 118 Q50 118 50 113 Q50 108 57 108 Q60 108 60 110 L60 92 Z" fill="#111" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="140" cy="102" r="42" fill="#B7EFD9" stroke="#111" stroke-width="5"/>
+  <g fill="#6EAFEE" stroke="#111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M124 92 h24 v14 a12 12 0 0 1 -24 0 Z"/>
+    <path d="M148 96 a7 7 0 0 1 0 12" fill="none"/>
+  </g>
+  <circle cx="100" cy="140" r="42" fill="#F6E7A6" stroke="#111" stroke-width="5"/>
+  <path d="M84 134 Q100 158 116 138 L110 138 M116 138 L114 146" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
