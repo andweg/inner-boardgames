@@ -4,19 +4,12 @@
     { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } },
     { "id": "party", "label": { "en": "Party", "ko": "파티" } },
     { "id": "gateway", "label": { "en": "Easy to learn", "ko": "입문용" } },
-    { "id": "brainy", "label": { "en": "Big think", "ko": "두뇌풀가동" } }
+    { "id": "brainy", "label": { "en": "Big think", "ko": "두뇌풀가동" } },
+    { "id": "cute", "label": { "en": "Cute", "ko": "귀여움" } },
+    { "id": "quick", "label": { "en": "Quick", "ko": "짧고 간단" } },
+    { "id": "negotiation", "label": { "en": "Negotiation", "ko": "협상" } }
   ],
   "entries": [
-    {
-      "gameId": 174430,
-      "players": [1, 2, 3, 4],
-      "keywords": ["coop"],
-      "note": {
-        "en": "The co-op campaign everyone asks about. Clear an afternoon.",
-        "ko": "모두가 물어보는 협력 캠페인. 오후 시간을 통째로 비우세요."
-      },
-      "priority": 1
-    },
     {
       "gameId": 178900,
       "players": [4, 5, 6, 7, 8],
@@ -34,6 +27,86 @@
       "note": {
         "en": "Collect gems, look rich. Teaches itself in a minute.",
         "ko": "보석 모으고 부자 되기. 1분이면 설명 끝."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 163412,
+      "players": [2],
+      "keywords": ["gateway", "cute"],
+      "note": {
+        "en": "A cozy two-player duel of quilts and buttons.",
+        "ko": "단둘이 조각보를 채우는 아늑한 두뇌 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 244992,
+      "players": [2, 3, 4],
+      "keywords": ["coop", "quick"],
+      "note": {
+        "en": "No talking — just play the numbers in order, together.",
+        "ko": "말 한마디 없이 숫자를 순서대로. 마음이 통해야 해요."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 117959,
+      "players": [2, 3, 4, 5],
+      "keywords": ["gateway"],
+      "note": {
+        "en": "Roll dice, claim casinos, and read your rivals.",
+        "ko": "주사위를 굴려 카지노를 차지하는 눈치 싸움."
+      },
+      "priority": 3
+    },
+    {
+      "gameId": 306735,
+      "players": [2, 3, 4, 5, 6],
+      "keywords": ["party", "quick"],
+      "note": {
+        "en": "A fast bluffing game of chili, wasabi, and pepper.",
+        "ko": "고추·와사비·후추로 뻥카를 치는 빠른 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 188834,
+      "players": [5, 6, 7, 8, 9],
+      "keywords": ["social", "party", "negotiation"],
+      "note": {
+        "en": "Liberals versus hidden fascists. Trust no one.",
+        "ko": "자유주의자와 숨은 파시스트의 대결. 아무도 믿지 마세요."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 92415,
+      "players": [3, 4, 5, 6],
+      "keywords": ["party", "quick"],
+      "note": {
+        "en": "Flowers or skull? A pure game of nerve and bluff.",
+        "ko": "꽃이냐 해골이냐, 배짱과 허세의 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 198773,
+      "players": [4, 5, 6, 7, 8],
+      "keywords": ["party"],
+      "note": {
+        "en": "One-word clues to connect the picture cards.",
+        "ko": "한 단어 힌트로 그림 카드를 이어보세요."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 153938,
+      "players": [3, 4, 5, 6, 7, 8],
+      "keywords": ["party", "cute"],
+      "note": {
+        "en": "Bet on racing camels and enjoy the chaos.",
+        "ko": "경주하는 낙타에 돈을 걸고 즐기는 아수라장."
       },
       "priority": 2
     }
