@@ -61,6 +61,23 @@ export async function fetchCover(
   }
 }
 
+/**
+ * Extract a dominant accent colour from a game's cover, as a #rrggbb string.
+ * Returns null if the cover file is missing or can't be read. Uses sharp's
+ * built-in histogram, so no extra dependency.
+ */
+export async function coverAccent(id: number): Promise<string | null> {
+  const dest = coverPath(id);
+  if (!existsSync(dest)) return null;
+  try {
+    const { dominant } = await sharp(dest).stats();
+    const hex = (n: number) => n.toString(16).padStart(2, '0');
+    return `#${hex(dominant.r)}${hex(dominant.g)}${hex(dominant.b)}`;
+  } catch {
+    return null;
+  }
+}
+
 /** Remove cover files whose game id is no longer present in `keepIds`. */
 export async function pruneCovers(keepIds: Set<number>): Promise<number[]> {
   if (!existsSync(COVERS_DIR)) return [];

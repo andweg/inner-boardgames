@@ -95,7 +95,12 @@
             aria-pressed={filters.players === n}
             onclick={() => setPlayers(n)}
           >
-            {n}
+            <svg class="meeple" viewBox="0 0 24 24" aria-hidden="true"
+              ><path
+                d="M12 2a3 3 0 0 1 1.1 5.8C15.7 8.7 17 10.2 17 12v1h-2l-.8 8H9.8L9 13H7v-1c0-1.8 1.3-3.3 3.9-4.2A3 3 0 0 1 12 2Z"
+              /></svg
+            >
+            <span class="num tnum">{n}</span>
           </button>
         {/each}
       </div>
@@ -137,7 +142,9 @@
             aria-pressed={filters.lang === opt.id}
             onclick={() => (filters.lang = opt.id)}
           >
-            {$t(opt.key)}
+            <svg class="seg-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"
+              ><path d="M4 5h16v10H10l-4 4v-4H4z" stroke-linejoin="round" /></svg
+            >{$t(opt.key)}
           </button>
         {/each}
       </div>
@@ -248,15 +255,30 @@
     gap: 0.4rem;
   }
   .token {
-    width: 2.2rem;
-    height: 2.2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    width: 2.6rem;
+    height: 2.6rem;
     border-radius: 50%;
     border: var(--border);
     background: var(--surface);
-    font-weight: 700;
     color: var(--ink);
     box-shadow: var(--shadow-hard);
     transition: transform 0.08s ease;
+  }
+  .token .meeple {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    opacity: 0.75;
+  }
+  .token .num {
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
   }
   .token:active {
     transform: translate(2px, 2px);
@@ -265,6 +287,9 @@
   .token.on {
     background: var(--red);
     color: #fff;
+  }
+  .token.on .meeple {
+    opacity: 1;
   }
   .best-check {
     margin-top: 0.1rem;
@@ -281,6 +306,9 @@
     box-shadow: var(--shadow-hard);
   }
   .seg {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
     background: var(--surface);
     border: 0;
     border-right: 2px solid var(--line);
@@ -288,12 +316,20 @@
     font-weight: 600;
     color: var(--ink);
   }
+  .seg-ico {
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+  }
   .seg:last-child {
     border-right: 0;
   }
   .seg.on {
     background: var(--teal);
     color: #fff;
+  }
+  .seg.on .seg-ico {
+    opacity: 1;
   }
 
   .check {

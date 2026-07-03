@@ -21,6 +21,7 @@ import { assertBggAuth, bggGet, sleep } from './lib/bgg.ts';
 import { parseGeeklist } from './lib/parse-geeklist.ts';
 import { parseThing } from './lib/parse-thing.ts';
 import {
+  coverAccent,
   coverUrl,
   ensureCoversDir,
   fetchCover,
@@ -63,7 +64,8 @@ function orderGame(g: Game): Game {
     languageDependenceVotes: g.languageDependenceVotes,
     editionLanguages: g.editionLanguages,
     ownerTags: g.ownerTags,
-    cover: g.cover
+    cover: g.cover,
+    accent: g.accent ?? null
   };
 }
 
@@ -243,7 +245,8 @@ async function main(): Promise<void> {
         languageDependenceVotes: t.languageDependenceVotes,
         editionLanguages: meta.editionLanguages,
         ownerTags: meta.ownerTags,
-        cover: coverUrl(id)
+        cover: coverUrl(id),
+        accent: await coverAccent(id)
       })
     );
   }

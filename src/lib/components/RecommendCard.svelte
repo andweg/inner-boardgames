@@ -1,11 +1,13 @@
 <script lang="ts">
   import { locale, t } from '$lib/i18n/store.ts';
   import type { Game, RecommendationEntry } from '$lib/types.ts';
+  import { accentFor } from '$lib/accent.ts';
   import Cover from './Cover.svelte';
   import WeightDots from './WeightDots.svelte';
 
   let { entry, game }: { entry: RecommendationEntry; game: Game } = $props();
 
+  const accent = $derived(accentFor(game));
   const range = $derived(
     game.minPlayers === game.maxPlayers
       ? `${game.minPlayers}`
@@ -13,7 +15,7 @@
   );
 </script>
 
-<article class="card">
+<article class="card" style={`--accent:${accent}`}>
   <div class="cover">
     <Cover src={game.cover} name={game.name} size={96} />
   </div>
@@ -47,8 +49,24 @@
     background: var(--surface);
     border: var(--border);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-hard);
+    box-shadow: var(--shadow-soft);
     padding: 1rem;
+    transition:
+      transform 0.16s ease,
+      box-shadow 0.16s ease,
+      border-color 0.16s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  .cover {
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--accent) 16%, var(--surface));
   }
   .name {
     margin: 0 0 0.3rem;

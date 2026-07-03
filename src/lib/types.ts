@@ -30,6 +30,7 @@ export interface Game {
   editionLanguages: string[]; // from `lang:` tag, ISO 639-1
   ownerTags: string[]; // from `tag:` tags
   cover: string; // e.g. "/covers/174430.webp"
+  accent?: string | null; // dominant cover colour, e.g. "#c85c3c" (pipeline)
 }
 
 export interface GamesFile {
