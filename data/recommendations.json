@@ -3,10 +3,12 @@
     { "id": "bluffing", "label": { "en": "Bluffing", "ko": "블러핑" } },
     { "id": "coop", "label": { "en": "Co-operative", "ko": "협력" } },
     { "id": "cute", "label": { "en": "Cute", "ko": "귀여움" } },
+    { "id": "dexterity", "label": { "en": "Dexterity", "ko": "순발력" } },
     { "id": "gateway", "label": { "en": "Easy to learn", "ko": "입문용" } },
     { "id": "party", "label": { "en": "Party", "ko": "파티" } },
     { "id": "quick", "label": { "en": "Quick", "ko": "짧고 간단" } },
-    { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } }
+    { "id": "social", "label": { "en": "Social deduction", "ko": "마피아류" } },
+    { "id": "thinky", "label": { "en": "Thinky", "ko": "두뇌 전략" } }
   ],
   "entries": [
     {
@@ -32,7 +34,7 @@
     {
       "gameId": 163412,
       "players": [2],
-      "keywords": ["gateway", "cute"],
+      "keywords": ["gateway", "cute", "thinky"],
       "note": {
         "en": "A cozy two-player duel of quilts and buttons.",
         "ko": "단둘이 조각보를 채우는 아늑한 두뇌 게임."
@@ -142,7 +144,7 @@
     {
       "gameId": 98778,
       "players": [3, 4],
-      "keywords": ["coop", "gateway"],
+      "keywords": ["coop", "gateway", "thinky"],
       "note": {
         "en": "See everyone's cards but your own, and hint your way to a perfect firework.",
         "ko": "내 패만 못 보는 협력 게임. 힌트로 완벽한 불꽃놀이를 완성하세요."
@@ -162,7 +164,7 @@
     {
       "gameId": 253664,
       "players": [4, 5, 6],
-      "keywords": ["party", "quick", "gateway"],
+      "keywords": ["party", "quick", "gateway", "dexterity"],
       "note": {
         "en": "Chant the words, slap the match, and don't be last.",
         "ko": "구호를 외치다 카드가 맞으면 재빨리 손을 내리치세요."
@@ -172,7 +174,7 @@
     {
       "gameId": 314491,
       "players": [2, 3],
-      "keywords": ["cute"],
+      "keywords": ["cute", "thinky"],
       "note": {
         "en": "A gorgeous nature walk of watercolor cards and quiet strategy.",
         "ko": "수채화 카드로 자연을 관찰하는 아름답고 잔잔한 전략 게임."
@@ -206,6 +208,96 @@
       "note": {
         "en": "Collect Poke Balls, catch and evolve Pokemon, and build your engine.",
         "ko": "볼을 모아 포켓몬을 잡고 진화시키는 엔진 빌딩 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 147151,
+      "players": [5, 6, 7, 8],
+      "keywords": ["party", "gateway"],
+      "note": {
+        "en": "Guess words and phrases using only a board of universal icons.",
+        "ko": "보편적인 아이콘만으로 단어와 문장을 맞히는 파티 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 199792,
+      "players": [2, 3],
+      "keywords": ["thinky", "cute"],
+      "note": {
+        "en": "Build a woodland city of critters and constructions beneath a great tree.",
+        "ko": "커다란 나무 아래 동물 마을을 짓는 아기자기한 전략 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 1416,
+      "players": [3, 4, 5, 6],
+      "keywords": ["dexterity", "party", "quick"],
+      "note": {
+        "en": "Ring the bell the instant five matching fruits appear.",
+        "ko": "같은 과일 다섯 개가 보이면 재빨리 종을 치세요."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 158600,
+      "players": [2],
+      "keywords": ["thinky", "quick"],
+      "note": {
+        "en": "A tense two-player duel to win the favor of the geisha.",
+        "ko": "게이샤의 마음을 얻기 위한 팽팽한 2인 두뇌 대결."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 265381,
+      "players": [5, 6, 7, 8],
+      "keywords": ["social", "bluffing"],
+      "note": {
+        "en": "Personalities in one head race to guess ideas — but one is hiding.",
+        "ko": "한 사람 머릿속 인격들이 생각을 맞히는 정체 숨김 게임."
+      },
+      "priority": 3
+    },
+    {
+      "gameId": 12942,
+      "players": [4, 5, 6],
+      "keywords": ["gateway", "quick", "thinky"],
+      "note": {
+        "en": "Take the card or spend a chip to dodge it — press your luck.",
+        "ko": "카드를 받을지, 칩을 내고 넘길지 고민하는 눈치 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 128882,
+      "players": [6, 7, 8, 9, 10],
+      "keywords": ["social", "bluffing"],
+      "note": {
+        "en": "Loyal knights and hidden spies clash over five secret quests.",
+        "ko": "충직한 기사와 숨은 스파이가 다섯 원정을 두고 겨루는 정체 게임."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 1817,
+      "players": [3, 4],
+      "keywords": ["gateway"],
+      "note": {
+        "en": "Flee a sinking island while sharks, whales, and rivals ruin your escape.",
+        "ko": "가라앉는 섬에서 탈출하세요. 상어와 고래, 라이벌이 앞길을 막습니다."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 220738,
+      "players": [2, 3, 4],
+      "keywords": ["dexterity", "cute"],
+      "note": {
+        "en": "Stack circus blocks to finish your acrobatic show without a wobble.",
+        "ko": "서커스 블록을 쌓아 무너뜨리지 않고 곡예 쇼를 완성하세요."
       },
       "priority": 2
     }
