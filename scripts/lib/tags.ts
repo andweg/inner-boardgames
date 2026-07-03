@@ -4,7 +4,7 @@
  * Recognised tags (whitespace/comma separated, case-insensitive keys):
  *   lang:ko          → editionLanguages: ["ko"]
  *   lang:ko,ja       → editionLanguages: ["ko","ja"]   (multilingual box)
- *   tag:staff-pick   → ownerTags: ["staff-pick"]
+ *   tag:staff-pick   → ownerTags: []
  *
  * Validation is load-bearing: nothing here ever throws or drops a game.
  * Problems are pushed onto `issues` for the fetch report and the game

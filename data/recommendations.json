@@ -11,8 +11,8 @@
   "entries": [
     {
       "gameId": 178900,
-      "players": [4, 5, 6, 7, 8],
-      "keywords": ["party", "social"],
+      "players": [4, 6, 8],
+      "keywords": ["party", "gateway", "coop"],
       "note": {
         "en": "Two teams, one grid of words. Loud in the best way.",
         "ko": "두 팀, 단어 한 판. 시끌벅적하게 즐기기 좋아요."
@@ -42,7 +42,7 @@
     {
       "gameId": 244992,
       "players": [2, 3, 4],
-      "keywords": ["coop", "quick"],
+      "keywords": ["coop", "quick", "gateway"],
       "note": {
         "en": "No talking — just play the numbers in order, together.",
         "ko": "말 한마디 없이 숫자를 순서대로. 마음이 통해야 해요."
@@ -51,7 +51,7 @@
     },
     {
       "gameId": 117959,
-      "players": [2, 3, 4, 5],
+      "players": [3, 4, 5],
       "keywords": ["gateway"],
       "note": {
         "en": "Roll dice, claim casinos, and read your rivals.",
@@ -61,7 +61,7 @@
     },
     {
       "gameId": 306735,
-      "players": [2, 3, 4, 5, 6],
+      "players": [3, 4, 5, 6],
       "keywords": ["party", "quick", "bluffing"],
       "note": {
         "en": "A fast bluffing game of chili, wasabi, and pepper.",
@@ -71,7 +71,7 @@
     },
     {
       "gameId": 188834,
-      "players": [5, 6, 7, 8, 9],
+      "players": [6, 7, 8, 9],
       "keywords": ["social", "party", "bluffing"],
       "note": {
         "en": "Liberals versus hidden fascists. Trust no one.",
@@ -81,7 +81,7 @@
     },
     {
       "gameId": 92415,
-      "players": [3, 4, 5, 6],
+      "players": [4, 5, 6],
       "keywords": ["party", "quick", "bluffing"],
       "note": {
         "en": "Flowers or skull? A pure game of nerve and bluff.",
@@ -91,8 +91,8 @@
     },
     {
       "gameId": 198773,
-      "players": [4, 5, 6, 7, 8],
-      "keywords": ["party", "coop"],
+      "players": [4, 6, 8],
+      "keywords": ["party", "coop", "gateway"],
       "note": {
         "en": "One-word clues to connect the picture cards.",
         "ko": "한 단어 힌트로 그림 카드를 이어보세요."
@@ -101,11 +101,111 @@
     },
     {
       "gameId": 153938,
-      "players": [3, 4, 5, 6, 7, 8],
+      "players": [3, 4, 5, 6],
       "keywords": ["party", "cute"],
       "note": {
         "en": "Bet on racing camels and enjoy the chaos.",
         "ko": "경주하는 낙타에 돈을 걸고 즐기는 아수라장."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 2818,
+      "players": [4, 5, 6],
+      "keywords": ["party", "quick", "gateway"],
+      "note": {
+        "en": "Classic UNO with a launcher that fires cards at the worst moment.",
+        "ko": "카드 발사기가 최악의 순간에 카드를 쏘는 우노."
+      },
+      "priority": 3
+    },
+    {
+      "gameId": 8946,
+      "players": [2, 3, 4],
+      "keywords": ["gateway", "quick"],
+      "note": {
+        "en": "Crack your rival's hidden numbers before they crack yours.",
+        "ko": "상대의 숨은 숫자를 먼저 알아맞히는 추리 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 39856,
+      "players": [4, 5, 6],
+      "keywords": ["gateway"],
+      "note": {
+        "en": "Give a dreamy clue for one surreal card — not too clear, not too cryptic.",
+        "ko": "몽환적인 그림 카드에 절묘한 힌트를. 너무 쉽지도 어렵지도 않게."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 98778,
+      "players": [3, 4],
+      "keywords": ["coop", "gateway"],
+      "note": {
+        "en": "See everyone's cards but your own, and hint your way to a perfect firework.",
+        "ko": "내 패만 못 보는 협력 게임. 힌트로 완벽한 불꽃놀이를 완성하세요."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 204135,
+      "players": [4, 5, 6],
+      "keywords": ["gateway", "quick"],
+      "note": {
+        "en": "Flip, swap, and dump your high cards — lowest score wins.",
+        "ko": "높은 카드를 버리고 낮은 점수를 노리는 골프식 카드 게임."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 253664,
+      "players": [4, 5, 6],
+      "keywords": ["party", "quick", "gateway"],
+      "note": {
+        "en": "Chant the words, slap the match, and don't be last.",
+        "ko": "구호를 외치다 카드가 맞으면 재빨리 손을 내리치세요."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 314491,
+      "players": [2, 3],
+      "keywords": ["cute"],
+      "note": {
+        "en": "A gorgeous nature walk of watercolor cards and quiet strategy.",
+        "ko": "수채화 카드로 자연을 관찰하는 아름답고 잔잔한 전략 게임."
+      },
+      "priority": 3
+    },
+    {
+      "gameId": 348096,
+      "players": [4, 5, 6],
+      "keywords": ["coop", "quick", "party"],
+      "note": {
+        "en": "Flip sand timers together and keep every kite in the air.",
+        "ko": "모래시계를 뒤집으며 모든 연을 함께 띄우는 실시간 협력 게임."
+      },
+      "priority": 1
+    },
+    {
+      "gameId": 377061,
+      "players": [3, 4],
+      "keywords": ["cute"],
+      "note": {
+        "en": "Grab ingredients and fill coffee orders before the queue buries you.",
+        "ko": "재료를 모아 주문이 밀리기 전에 커피를 완성하세요."
+      },
+      "priority": 2
+    },
+    {
+      "gameId": 406291,
+      "players": [2, 3, 4],
+      "keywords": ["gateway", "cute"],
+      "note": {
+        "en": "Collect Poke Balls, catch and evolve Pokemon, and build your engine.",
+        "ko": "볼을 모아 포켓몬을 잡고 진화시키는 엔진 빌딩 게임."
       },
       "priority": 2
     }
