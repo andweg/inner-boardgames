@@ -53,7 +53,11 @@
   .fallback {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  }
+  img {
+    /* Show the whole cover, letterboxed within the square tile rather than
+       cropped to fill it. */
+    object-fit: contain;
   }
   .fallback {
     display: grid;
