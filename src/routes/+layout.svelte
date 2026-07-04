@@ -28,10 +28,13 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container bar">
     <p>
       {$locale === 'ko' ? '데이터 갱신' : 'Data refreshed'}: <span class="tnum">{refreshed}</span>
       · <a href="https://boardgamegeek.com" rel="noreferrer">BoardGameGeek</a>
+    </p>
+    <p class="credit">
+      Built by <a href="https://andweg.dev" rel="noreferrer">The Andrew</a>. Have fun.
     </p>
   </div>
 </footer>
@@ -49,7 +52,17 @@
     font-size: 0.85rem;
     color: var(--ink-soft);
   }
+  .site-footer .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+  }
   .site-footer p {
     margin: 0;
+  }
+  .credit {
+    margin-left: auto;
   }
 </style>

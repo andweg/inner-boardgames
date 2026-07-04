@@ -16,7 +16,8 @@
   // Mobile: the panel is collapsed behind a toggle.
   let open = $state(false);
 
-  const playerOptions = [1, 2, 3, 4, 5, 6, 7, 8];
+  // 1–8 plus "9+" (value 9 = "9 or more"), matching the recommender's picker.
+  const playerOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const weightOptions: { id: WeightBucket; key: any }[] = [
     { id: 'any', key: 'filter.weight.any' },
     { id: 'light', key: 'filter.weight.light' },
@@ -100,7 +101,7 @@
                 d="M12 2a3 3 0 0 1 1.1 5.8C15.7 8.7 17 10.2 17 12v1h-2l-.8 8H9.8L9 13H7v-1c0-1.8 1.3-3.3 3.9-4.2A3 3 0 0 1 12 2Z"
               /></svg
             >
-            <span class="num tnum">{n}</span>
+            <span class="num tnum">{n === 9 ? '9+' : n}</span>
           </button>
         {/each}
       </div>
